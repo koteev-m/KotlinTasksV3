@@ -16,10 +16,12 @@ fun main() {
     if (((SHIP_WITHOUT_DAMAGE.also { damage = it }) && (numberOfCrew in MIN_CREW..MAX_CREW) &&
                 (boxesOfProvision >= MIN_PROVISION_BOXES) && (goodWeather == SUNNY_WTHR)) ||
         ((damage == MINOR_DAMAGE) && (numberOfCrew == OPTIMAL_CREW)) && (goodWeather == SUNNY_WTHR) &&
-        (boxesOfProvision >= MIN_PROVISION_BOXES)
-    ) {
+        (boxesOfProvision >= MIN_PROVISION_BOXES)) {
         println("Корабль может отправиться в плавание.")
-    } else println("Корабль не может отправиться в плавание.")
+    }
+    else{
+        println("Корабль не может отправиться в плавание.")
+    }
 }
 
 const val SUNNY_WTHR = true
